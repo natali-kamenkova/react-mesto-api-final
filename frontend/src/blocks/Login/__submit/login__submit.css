@@ -1,0 +1,24 @@
+.login__submit {
+  margin-top: 216px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  width: 358px;
+  height: 50px;
+  left: 461px;
+  top: 558px;
+  background: #FFFFFF;
+  border-radius: 2px;
+  color: #000000;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+@media screen and (max-width: 530px) {
+  .login__submit{
+    width: 260px;
+    height: 46px;
+  }
+}

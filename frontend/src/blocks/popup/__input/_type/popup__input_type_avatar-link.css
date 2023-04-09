@@ -1,0 +1,7 @@
+.popup__input_type_avatar-link{
+  padding-bottom: 0px;
+}
+
+.popup__input_type_avatar-link:first-child {
+  margin-bottom: 0px;
+}

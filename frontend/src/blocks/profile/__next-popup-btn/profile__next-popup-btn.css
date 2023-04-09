@@ -1,0 +1,26 @@
+.profile__next-popup-btn{
+  width: 150px;
+ height: 50px;
+ background-color: #000000;
+ box-sizing: border-box;
+ border: 2px solid #ffffff;
+ border-radius: 2px;
+ background: url(../../../images/plus.svg);
+ background-repeat: no-repeat;
+ background-position: center;
+ background-size: 22px;
+}
+
+.profile__next-popup-btn:hover{
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+@media screen and (max-width: 900px) {
+  .profile__next-popup-btn{
+    width: 282px;
+    background-size: 16px;
+    margin-top: 32px;
+    margin-left: 4px;
+  }
+}

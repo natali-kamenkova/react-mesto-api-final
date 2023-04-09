@@ -1,0 +1,28 @@
+.header__link-singup {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: right;
+  color: #FFFFFF;
+  text-decoration: none;
+
+}
+
+@media screen and (max-width: 530px) {
+  .header__link-singup {
+   
+    margin: 0 auto;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 18px;
+    /*margin-left: 40px;*/
+    text-align: center;
+
+    color: #FFFFFF;
+  }
+}

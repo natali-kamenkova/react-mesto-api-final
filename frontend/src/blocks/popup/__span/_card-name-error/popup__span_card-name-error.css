@@ -1,0 +1,10 @@
+.popup__span_card-name-error{
+  position: absolute;
+  top: 145px;
+}
+
+@media screen and (max-width: 530px) {
+  .popup__span_card-name-error{
+    top: 150px;
+  }
+}

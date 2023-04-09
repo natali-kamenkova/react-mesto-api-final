@@ -1,0 +1,10 @@
+.popup__span_job-error{
+  position: absolute;
+  top: 200px;
+}
+
+@media screen and (max-width: 530px) {
+  .popup__span_job-error{
+    top: 207px;
+  }
+}

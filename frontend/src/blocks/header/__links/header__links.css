@@ -1,0 +1,10 @@
+.header__links{
+
+}
+
+@media screen and (max-width: 530px) {
+  .header__links{
+    
+    margin: 0 auto;
+  }
+}
