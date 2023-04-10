@@ -12,7 +12,7 @@ const { handlerRequestLogger, handlerErrorLogger } = require('./middlewares/logg
 const { validationCreateUser, validationLogin } = require('./middlewares/validation');
 const { createUser, login } = require('./controllers/users');
 
-const { PORT = 1111, MONGO_URL = 'mongodb://localhost:27017/mestodb' } = process.env;
+const { PORT = 3000, MONGO_URL = 'mongodb://127.0.0.1:27017/mestodb' } = process.env;
 
 const app = express();
 
