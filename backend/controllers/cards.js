@@ -3,10 +3,6 @@ const NotFound = require('../errors/NotFound'); // 404
 const BadRequest = require('../errors/BadRequest'); // 400
 const NotAllowedError = require('../errors/NotAllowedError'); // 403
 
-const {
-  OK,
-} = require('../constants');
-
 // создание карточки
 module.exports.createCard = (req, res, next) => {
   const { name, link } = req.body;
@@ -43,7 +39,7 @@ module.exports.deleteCard = (req, res, next) => {
         throw new NotAllowedError('У данного пользователя нет прав для удаления данной карточки!');
       } else {
         return card.remove()
-          .then(() => res.status(OK).send({ message: 'Карточка успешно удалена' }));
+          .then(() => res.send({ message: 'Карточка успешно удалена' }));
       }
     })
     .catch(next); // создаст 500
