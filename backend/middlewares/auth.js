@@ -2,6 +2,7 @@ const jwt = require('jsonwebtoken');
 
 const NotAuthError = require('../errors/NotAuthError');
 
+// Файл .env добавлен на сервере
 const { JWT_SECRET = 'dev-key' } = process.env;
 
 module.exports.auth = (req, res, next) => {
