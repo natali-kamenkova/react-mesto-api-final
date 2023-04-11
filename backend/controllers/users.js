@@ -7,7 +7,6 @@ const BadRequest = require('../errors/BadRequest'); // 400
 const ConflictError = require('../errors/ConflictError'); // 409
 const NotAuthError = require('../errors/NotAuthError');
 const {
-  OK,
   SALT,
   CREATED,
   MONGO_DUPLICATE_ERROR_CODE,
@@ -146,7 +145,7 @@ module.exports.login = (req, res, next) => {
           );
           // вернём токен
           console.log(token);
-          res.status(OK).send({ message: 'Добро пожаловать', token });
+          res.send({ message: 'Добро пожаловать', token });
         })
         .catch(next);
     })
