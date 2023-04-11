@@ -42,8 +42,8 @@ module.exports.deleteCard = (req, res, next) => {
       if (!card.owner.equals(userId)) {
         throw new NotAllowedError('У данного пользователя нет прав для удаления данной карточки!');
       } else {
-        card.remove();
-        res.status(OK).send({ message: 'Карточка успешно удалена' });
+        return card.remove()
+          .then(() => res.status(OK).send({ message: 'Карточка успешно удалена' }));
       }
     })
     .catch(next); // создаст 500
