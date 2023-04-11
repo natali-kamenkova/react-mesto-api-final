@@ -25,17 +25,13 @@ module.exports.getUsers = (req, res, next) => {
 // текущий пользователь
 module.exports.getCurrentUser = (req, res, next) => {
   User.findById(req.user._id)
+    .orFail(new NotFound('Пользователь не найден'))
     .then((user) => {
-      if (!user) {
-        throw new NotFound('Пользователь не найден');
-      }
       res.send(user);
     })
     .catch((err) => {
       if (err.name === 'CastError') {
         next(BadRequest('Переданы некорректные данные'));
-      } else if (err.message === 'NotFound') {
-        next(new NotFound('Пользователь не найден'));
       } else next(err);
     });
 };
@@ -61,9 +57,6 @@ module.exports.createUser = (req, res, next) => {
   const {
     name, about, avatar, email, password,
   } = req.body;
-  if (!req.body.email || !req.body.password) {
-    next(new BadRequest('Переданы некорректные данные'));
-  }
   bcrypt.hash(password, SALT)
     .then((hash) => User.create({
       name, about, avatar, email, password: hash,
